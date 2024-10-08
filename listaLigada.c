@@ -25,6 +25,7 @@ Node* createNode(int data) {
 
     newNode->data = data;
     newNode->next_node = NULL;
+
     return newNode;
 
 }
@@ -95,7 +96,7 @@ void removeNode(Node** head, int key) {
     if(temp != NULL && temp->data == key){
         *head = temp->next_node;
         free(temp);
-        return;
+        return 0;
     }
 
     //Procura o nó a ser removido:
